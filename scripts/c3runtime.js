@@ -2806,24 +2806,27 @@ newY);wi.SetBboxChanged()}}else if(this._axes===1){if(wi.GetX()!==newX){wi.SetX(
 		C3.Plugins.Mouse,
 		C3.Plugins.System.Cnds.OnLayoutStart,
 		C3.Plugins.Spritefont2.Acts.SetText,
+		C3.Plugins.System.Cnds.IsGroupActive,
 		C3.Behaviors.DragnDrop.Cnds.OnDrop,
 		C3.Plugins.Sprite.Cnds.IsOverlapping,
 		C3.Plugins.Sprite.Cnds.CompareInstanceVar,
 		C3.Plugins.Spritefont2.Acts.SetDefaultColor,
 		C3.Plugins.System.Exps.rgba255,
 		C3.Plugins.Audio.Acts.Play,
+		C3.Plugins.System.Acts.SetBoolVar,
 		C3.Plugins.System.Cnds.Else,
 		C3.Behaviors.DragnDrop.Cnds.OnDragStart,
 		C3.Plugins.Mouse.Cnds.OnObjectClicked,
 		C3.Plugins.Sprite.Acts.SetPos,
+		C3.Plugins.System.Cnds.CompareBoolVar,
+		C3.Plugins.System.Acts.GoToLayout,
 		C3.Plugins.System.Cnds.OnLoadFinished,
 		C3.Plugins.System.Cnds.CompareVar,
 		C3.Plugins.Sprite.Acts.SetAnimFrame,
 		C3.Plugins.Audio.Acts.SetSilent,
 		C3.Plugins.Audio.Acts.SetVolume,
 		C3.Plugins.System.Acts.SetVar,
-		C3.Plugins.System.Acts.AddVar,
-		C3.Plugins.System.Acts.GoToLayout
+		C3.Plugins.System.Acts.AddVar
 		];
 	};
 	self.C3_JsPropNameTable = [
@@ -2959,13 +2962,18 @@ newY);wi.SetBboxChanged()}}else if(this._axes===1){if(wi.GetX()!==newX){wi.SetX(
 
 	self.C3_ExpressionFuncs = [
 		() => "",
+		() => "plagio_act1",
 		() => 1,
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0(142, 154, 175, 0);
 		},
 		() => "Resumen es correcto",
-		() => 0,
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => v0.GetValue();
+		},
+		() => "win",
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0(239, 211, 215, 0);
@@ -2977,6 +2985,7 @@ newY);wi.SetBboxChanged()}}else if(this._axes===1){if(wi.GetX()!==newX){wi.SetX(
 		() => "Referencias es correcto",
 		() => 4,
 		() => "Plagio es correcto",
+		() => 0,
 		() => 1542,
 		() => 322,
 		() => 1545,
@@ -2985,10 +2994,6 @@ newY);wi.SetBboxChanged()}}else if(this._axes===1){if(wi.GetX()!==newX){wi.SetX(
 		() => 637,
 		() => 1547,
 		() => 802,
-		p => {
-			const v0 = p._GetNode(0).GetVar();
-			return () => v0.GetValue();
-		},
 		() => "musica",
 		() => -20,
 		() => -15,
