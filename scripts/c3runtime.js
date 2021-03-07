@@ -2862,10 +2862,13 @@ newY);wi.SetBboxChanged()}}else if(this._axes===1){if(wi.GetX()!==newX){wi.SetX(
 		C3.Plugins.Mouse.Cnds.OnObjectClicked,
 		C3.Plugins.Sprite.Acts.SetPos,
 		C3.Plugins.System.Cnds.OnLoadFinished,
-		C3.Plugins.System.Acts.GoToLayout,
 		C3.Plugins.System.Cnds.CompareVar,
 		C3.Plugins.Sprite.Acts.SetAnimFrame,
-		C3.Plugins.Audio.Acts.SetSilent
+		C3.Plugins.Audio.Acts.SetSilent,
+		C3.Plugins.Audio.Acts.SetVolume,
+		C3.Plugins.System.Acts.SetVar,
+		C3.Plugins.System.Acts.AddVar,
+		C3.Plugins.System.Acts.GoToLayout
 		];
 	};
 	self.C3_JsPropNameTable = [
@@ -2894,6 +2897,8 @@ newY);wi.SetBboxChanged()}}else if(this._axes===1){if(wi.GetX()!==newX){wi.SetX(
 		{vol: 0},
 		{vol_btn: 0},
 		{play: 0},
+		{creditos_titulo: 0},
+		{estrella: 0},
 		{Familia1: 0},
 		{volumen: 0}
 	];
@@ -3020,8 +3025,11 @@ newY);wi.SetBboxChanged()}}else if(this._axes===1){if(wi.GetX()!==newX){wi.SetX(
 			const v0 = p._GetNode(0).GetVar();
 			return () => v0.GetValue();
 		},
+		() => "musica",
+		() => -20,
 		() => -15,
-		() => -20
+		() => -10,
+		() => -5
 	];
 }
 
