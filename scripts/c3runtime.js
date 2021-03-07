@@ -2804,10 +2804,11 @@ newY);wi.SetBboxChanged()}}else if(this._axes===1){if(wi.GetX()!==newX){wi.SetX(
 		C3.Plugins.Spritefont2,
 		C3.Plugins.Audio,
 		C3.Plugins.Mouse,
+		C3.Plugins.System.Cnds.IsGroupActive,
 		C3.Plugins.System.Cnds.OnLayoutStart,
 		C3.Plugins.Spritefont2.Acts.SetText,
 		C3.Plugins.Sprite.Acts.SetPos,
-		C3.Plugins.System.Cnds.IsGroupActive,
+		C3.Plugins.System.Acts.SetBoolVar,
 		C3.Behaviors.DragnDrop.Cnds.OnDragStart,
 		C3.Plugins.Sprite.Acts.MoveToTop,
 		C3.Behaviors.DragnDrop.Cnds.OnDrop,
@@ -2816,7 +2817,6 @@ newY);wi.SetBboxChanged()}}else if(this._axes===1){if(wi.GetX()!==newX){wi.SetX(
 		C3.Plugins.Spritefont2.Acts.SetDefaultColor,
 		C3.Plugins.System.Exps.rgba255,
 		C3.Plugins.Audio.Acts.Play,
-		C3.Plugins.System.Acts.SetBoolVar,
 		C3.Plugins.Sprite.Acts.MoveToBottom,
 		C3.Plugins.System.Cnds.Else,
 		C3.Plugins.Mouse.Cnds.OnObjectClicked,
@@ -2963,6 +2963,7 @@ newY);wi.SetBboxChanged()}}else if(this._axes===1){if(wi.GetX()!==newX){wi.SetX(
 	}
 
 	self.C3_ExpressionFuncs = [
+		() => "plagio_act1",
 		() => "",
 		() => 1542,
 		() => 322,
@@ -2972,7 +2973,6 @@ newY);wi.SetBboxChanged()}}else if(this._axes===1){if(wi.GetX()!==newX){wi.SetX(
 		() => 637,
 		() => 1547,
 		() => 802,
-		() => "plagio_act1",
 		() => 1,
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
